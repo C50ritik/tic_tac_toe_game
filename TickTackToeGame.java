@@ -6,15 +6,15 @@ public class TicTackToeGame {
     public static void main(String[] args) {
         System.out.println("Welcome To Tic Tac Toe GAme!!!!");
         char[] board=createBoard();				            //Calling the createBoard function
-        char player=selection();
+        char user=selection();
         char computer;
-        if(player=='X'){
+        if(user=='X'){
             computer='O';
         }
         else {
             computer='X';
         }
-        System.out.println("player :"+player+" "+"Computer :"+computer);
+        System.out.println("player :"+user+" "+"Computer :"+computer);
     }
     public static char[] createBoard(){
         char[] board=new char[10];
@@ -25,7 +25,7 @@ public class TicTackToeGame {
     }
     public static char selection(){         //selection of X or O;
         Scanner sc=new Scanner(System.in);
-        char player=sc.next().charAt(0);
-        return player;
+        char user=sc.next().charAt(0);
+        return user;
     }
 }
