@@ -1,5 +1,4 @@
 package com.workshop;
-
 import java.util.Scanner;
 
 public class TicTackToeGame {
@@ -7,14 +6,15 @@ public class TicTackToeGame {
         System.out.println("Welcome To Tic Tac Toe GAme!!!!");
         char[] board=createBoard();				            //Calling the createBoard function
         char user=selection();
-        char computer;
-        if(user=='X'){
-            computer='O';
+        char computer=' ';
+        if(user=='X') computer = 'O';
+        else if(user=='O') computer='X';
+        else{
+            System.out.println("Not Proper input,Try Again !!!");
+            return;
         }
-        else {
-            computer='X';
-        }
-        System.out.println("player :"+user+" "+"Computer :"+computer);
+        System.out.println("User : "+user+" "+"Computer : "+ computer);
+        return;
     }
     public static char[] createBoard(){
         char[] board=new char[10];
